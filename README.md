@@ -15,7 +15,7 @@ test code using [Unity](https://github.com/ThrowTheSwitch/Unity)
 for unitest program
 
 ```bash
-$ make utest
+$ make test
 ```
 will generate test_app elf file under build directory
 
@@ -34,3 +34,10 @@ To clean:
 $ make clean
 ```
 will remove all files under build directory
+
+## CI
+
+make test and make will be invoked after git push by github actions
+- .github/workflows/c-cpp.yml
+
+
