@@ -18,7 +18,9 @@ TARGET_T = $(BUILD_DIR)/test_app
 
 all: $(TARGET)
 
-utest: $(TARGET_T)
+test: $(TARGET_T)
+	@echo ""
+	@$(TARGET_T)
 
 # for normal program
 $(TARGET): $(OBJS)
@@ -36,4 +38,4 @@ clean:
 	rm -rf $(TARGET)
 	rm -rf $(TARGET_T)
 
-.PHONY: all clean utest
+.PHONY: all clean test
