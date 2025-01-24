@@ -38,6 +38,8 @@ will remove all files under build directory
 ## CI
 
 make test and make will be invoked after git push by github actions
-- .github/workflows/c-cpp.yml
-
+- .github/workflows/ci.yml
+- store unit test result as github artifact
+- github action will be stop if unit test fail
+- github action will be stop if make fail
 
