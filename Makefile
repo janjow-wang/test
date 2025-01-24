@@ -19,8 +19,7 @@ TARGET_T = $(BUILD_DIR)/test_app
 all: $(TARGET)
 
 test: $(TARGET_T)
-	@echo ""
-	@$(TARGET_T)
+	@$(TARGET_T) > unit_test.log
 
 # for normal program
 $(TARGET): $(OBJS)
