@@ -20,6 +20,13 @@ jobs:
       with:
         name: unit_test log
         path: ./unit_test.log
-      
+        
+    - name: check unit_test log
+      run: |
+        if grep FAIL unit_test.log ; then
+          echo "unit test fail"
+          exit 1
+        fi
+        
     - name: make
       run: make
